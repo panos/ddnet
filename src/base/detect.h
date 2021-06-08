@@ -86,7 +86,6 @@
 #define CONF_FAMILY_UNIX 1
 #define CONF_FAMILY_STRING "unix"
 #define CONF_PLATFORM_HAIKU 1
-#define CONF_PLATFORM_STRING "haiku"
 #endif
 
 /* use gcc endianness definitions when available */
@@ -169,13 +168,7 @@
 #define PLATFORM_SUFFIX ""
 #endif
 
-#ifndef CONF_PLATFORM_STRING
-#define CONF_PLATFORM_STRING "unknown"
-#endif
-
-#ifndef PLATFORM_STRING
-#define PLATFORM_STRING "unknown"
-#endif
+#define CONF_PLATFORM_STRING PLATFORM_STRING PLATFORM_SUFFIX
 
 #ifndef CONF_ARCH_STRING
 #define CONF_ARCH_STRING "unknown"
